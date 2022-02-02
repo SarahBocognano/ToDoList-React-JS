@@ -1,0 +1,16 @@
+.Header {
+    display:block;
+    width:100%;
+    background-color: teal;
+    height: 150px;
+    border-top: 10px solid steelblue;
+    border-bottom:10px solid steelblue;
+}
+
+.toDo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    padding-top:30px;
+}

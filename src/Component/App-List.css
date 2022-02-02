@@ -1,0 +1,14 @@
+.newTaskUl {
+    background-color: rgba(0, 128, 128, 0.739);
+    color: white;
+    margin:70px;
+    width: 300px;
+    height:500px;
+    border:5px solid black;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid black;
+    margin: 5px;
+}
