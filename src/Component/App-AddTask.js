@@ -1,10 +1,10 @@
 import {useState} from "react";
 
 function AppAddTask (props) {
-    const [task, setTask] = useState({text:""})
+    const [task, setTask] = useState({text:"", id: Date.now()})
     
     const handleChange = e => {
-        setTask({text: e.target.value})
+        setTask({text: e.target.value, id: Date.now()})
     }
     const handleAdd = e => {
         if (task.text  !== "") {

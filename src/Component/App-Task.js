@@ -4,6 +4,7 @@ import { useState } from "react";
 function AppTask (props) {
     const [mode, setMode] = useState("display")
     const [taskNewText, setTaskNewText] = useState(props.text)
+    const callBackToUseToChangeItem = props.toChangeItem;
 
     function changeMode () {
         if (mode === "display") {
@@ -18,6 +19,7 @@ function AppTask (props) {
     }
 
     function handleClick (e) {
+        callBackToUseToChangeItem (taskNewText, props.id);
         setMode("display")
     }
 
@@ -26,7 +28,7 @@ function AppTask (props) {
         <div>
             {mode === "display" ? (
                 <div onClick={changeMode}>
-                    {taskNewText}
+                    {props.text}
                 </div>
             ): ( 
                 <div>

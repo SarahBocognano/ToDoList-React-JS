@@ -21,13 +21,17 @@ function App() {
     localStorage.setItem(localStorageKey, JSON.stringify(newTaskList));
   }
 
+  function changeItem(newText,id) {
+    
+  }
+
   return (
     <div>
       <AppHeader />
       <AppAddTask onTask={handleClick}>
 
       </AppAddTask>
-      <AppList listItems={listTask}/>
+      <AppList listItems={listTask} toChangeItem={changeItem}/>
     </div>
   );
 }
