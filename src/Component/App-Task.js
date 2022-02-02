@@ -2,14 +2,14 @@ import { useState } from "react";
 
 
 function AppTask (props) {
-    const [mode, setMode] = useState("affichage")
+    const [mode, setMode] = useState("display")
     const [taskNewText, setTaskNewText] = useState(props.text)
 
     function changeMode () {
-        if (mode === "affichage") {
+        if (mode === "display") {
             setMode("edit")
         } else if (mode === "edit") {
-            setMode("affichage")
+            setMode("display")
         }
     }
 
@@ -18,13 +18,13 @@ function AppTask (props) {
     }
 
     function handleClick (e) {
-        setMode("affichage")
+        setMode("display")
     }
 
-    
+
     return (
         <div>
-            {mode === "affichage" ? (
+            {mode === "display" ? (
                 <div onClick={changeMode}>
                     {taskNewText}
                 </div>
@@ -32,14 +32,10 @@ function AppTask (props) {
                 <div>
                     <input type="text" value={taskNewText} onChange={userIsTappingIntoInput} />
                     <button onClick={handleClick}>Edit</button>
-                    
                 </div>
             )}
-            
         </div>
     )
-
-
     
     
 }
